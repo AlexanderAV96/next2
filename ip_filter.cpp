@@ -9,62 +9,89 @@
 
 int main( int argc , char* argv[] )
 {
-	if ( argc > 2 )
+	/*if ( argc > 2 )
 	{
 		std::cerr << "Parametres problem\n";
 		return EXIT_FAILURE;
-	}
+	}*/
 
 
 
 	std::string tmpData , add;
-	if ( argc == 2 )
+	//if ( argc == 2 )
+	//{
+	//	std::ifstream inputD( argv [ 1 ] );
+
+	//	if ( inputD.is_open( ) );
+
+	//	else
+	//	{
+
+	//		std::cout << "file for input does not exist";
+
+	//		exit( 0 );
+	//	}
+
+	//	while ( 1 )
+	//	{
+
+	//		if ( inputD.eof( ) ) break;
+
+
+	//		std::getline( inputD , add );
+	//		tmpData += add;
+	//		tmpData += '\n';
+
+	//	}
+	//}
+
+	//else
+	//{
+		//int count = 0;
+
+		//std::cout << "Enter number of adresses \n";
+		//std::cin >> count;
+		//std::cout << "Enter adress \n";
+		//for ( int i = 0; i < count; i++ )
+		//{
+		//	std::cin.ignore( std::numeric_limits<std::streamsize>::max( ) , '\n' );
+		//	std::getline( std::cin , add );
+		//	//std::cin >> add;
+		//	tmpData += add;
+		//	tmpData += '\n';
+		////	std::cin.clear( );
+		//	//std::cin.sync( );
+		//}
+	
+	/*std::getline( std::cin , tmpData );
+	std::cout << tmpData.size( ) << '1' << '\n';
+	std::cout << tmpData << '1' << '\n';
+	tmpData.clear( );*/
+
+	while ( 1 )
 	{
-		std::ifstream inputD( argv [ 1 ] );
 
-		if ( inputD.is_open( ) );
-
-		else
-		{
-
-			std::cout << "file for input does not exist";
-
-			exit( 0 );
-		}
-
-		while ( 1 )
-		{
-
-			if ( inputD.eof( ) ) break;
+		if ( std::cin.eof( ) ) break;
 
 
-			std::getline( inputD , add );
-			tmpData += add;
-			tmpData += '\n';
-
-		}
-	}
-
-	else
-	{
-		int count = 0;
-
-		std::cout << "Enter number of adresses \n";
-		std::cin >> count;
-		std::cout << "Enter adress \n";
-		for ( int i = 0; i < count; i++ )
-		{
-			std::cin.ignore( std::numeric_limits<std::streamsize>::max( ) , '\n' );
-			std::getline( std::cin , add );
-			//std::cin >> add;
-			tmpData += add;
-			tmpData += '\n';
-		//	std::cin.clear( );
-			//std::cin.sync( );
-		}
-
+		std::getline( std::cin , add );
+		tmpData += add;
+		tmpData += '\n';
 
 	}
+	std::cout << tmpData.size( ) << '3' << '\n';
+
+
+	
+
+
+
+
+	//std::getline( tmpData , add );
+	//tmpData += add;
+	//tmpData += '\n';
+
+//}
 
 
 
@@ -211,11 +238,11 @@ int main( int argc , char* argv[] )
 							}
 
 							else if ( std::get <2>( *iter ) < std::get <2>( tmptuple ) )
-							{ 
-								
+							{
+
 								iplist.insert( iter , tmptuple );
 								break;
-							
+
 							}
 
 						}
