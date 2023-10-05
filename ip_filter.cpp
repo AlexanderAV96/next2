@@ -37,7 +37,7 @@ int main(  )
 	std::vector <std::tuple<int , int , int , int , int , int , int> > iplist;
 	std::tuple<int , int , int , int , int , int , int> tmptuple;
 	std::string tmpstr;
-	std::size_t place = 0;
+	int place = 0;
 
 
 	for ( int i = 0; i < tmpData.size( ); i++ )
