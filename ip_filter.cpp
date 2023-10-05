@@ -37,10 +37,10 @@ int main(  )
 	std::vector <std::tuple<int , int , int , int , int , int , int> > iplist;
 	std::tuple<int , int , int , int , int , int , int> tmptuple;
 	std::string tmpstr;
-	int place = 0;
+	std::size_t place = 0;
 
 
-	for ( int i = 0; i < tmpData.size( ); i++ )
+	for ( std::size_t i = 0; i < tmpData.size( ); i++ )
 	{
 
 		if ( tmpData [ i ] == '.' )
