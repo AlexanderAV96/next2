@@ -18,7 +18,7 @@ set_target_properties(iptest PROPERTIES
 
 if(CMAKE_CXX_COMPILER_ID MATCHES "Clang" OR
 CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
-target_compile_options(11.posl_cont PRIVATE
+target_compile_options(iptest PRIVATE
 -g
 -Wall
 -Wextra
@@ -26,7 +26,7 @@ target_compile_options(11.posl_cont PRIVATE
 -pedantic)
 
 elseif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
-target_compile_options(posl_cont PRIVATE
+target_compile_options(iptest PRIVATE
 /EHsc
 /W4
 /WX)
