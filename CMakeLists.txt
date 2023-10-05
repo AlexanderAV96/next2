@@ -6,7 +6,7 @@ project(iptest )
 
 
 
-add_executable(iptest iptest/ip_filter.cpp)
+add_executable(iptest ip_filter.cpp)
 
 
 set_target_properties(iptest PROPERTIES
