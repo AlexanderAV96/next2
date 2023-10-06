@@ -5,13 +5,13 @@ on:
     branches:
       - ip
       - feature/github_actions
-  workflow_dispatch:
+    workflow_dispatch:
 
 jobs:
   build:
-      runs-on: ubuntu-latest
-      permissions: write-all
-      steps:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
       - uses: actions/checkout@v3
         with:
           submodules: true
@@ -25,7 +25,7 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       with:
+        with:
           tag_name: ${{ github.run_number }}
           release_name: Release ${{ github.run_number }}
           draft: false
