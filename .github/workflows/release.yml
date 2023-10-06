@@ -5,6 +5,7 @@ on:
     branches:
       - ip
       - feature/github_actions
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
